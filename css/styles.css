@@ -1,0 +1,41 @@
+body {
+  background-color: rgba(173, 35, 35, 0.808);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+#text,
+#frases {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  color: #333;
+  font-weight: bold;
+  transition: 0.8s;
+}
+
+button:hover {
+  color: #000;
+  scale: 1.1;
+}
