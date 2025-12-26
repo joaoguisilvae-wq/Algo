@@ -330,7 +330,6 @@ const textos = [
 let indice = 0;
 
 const video1 = document.querySelector("#video-fundo");
-const video2 = document.querySelector("#video-fo");
 
 footer.addEventListener("click", () => {
   if (indice < textos.length) {
@@ -344,7 +343,6 @@ footer.addEventListener("click", () => {
       frasesContainer.classList.add("hide");
       textContainer.classList.add("hide");
       video1.classList.remove("hide");
-      video2.classList.remove("hide");
     });
 
     footer.innerHTML = "";
