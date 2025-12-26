@@ -289,17 +289,6 @@ function escolherAmorAleatorio(tipo = "direto") {
   return lista[indiceAleatorio];
 }
 
-const imgs = ["img1", "img2", "img3", "img4", "img5", "img6"];
-
-document.body.addEventListener("click", () => {
-  document.body.className = "";
-
-  const classeAleatoria = imgs[Math.floor(Math.random() * imgs.length)];
-
-  // Adiciona a nova classe
-  document.body.classList.add(classeAleatoria);
-});
-
 const footer = document.querySelector("footer");
 const footerh1 = document.querySelector("footer h1");
 
