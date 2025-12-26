@@ -345,7 +345,6 @@ footer.addEventListener("click", () => {
       textContainer.classList.add("hide");
       video1.classList.remove("hide");
       video2.classList.remove("hide");
-      document.body.classList.add("img3");
     });
 
     footer.innerHTML = "";
