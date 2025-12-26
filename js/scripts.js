@@ -271,6 +271,7 @@ textContainer.addEventListener("click", () => {
   const amorDireto = escolherAmorAleatorio("direto");
 
   text.innerText = `${amorDireto.frase}`;
+  textT.innerText = `tradução: Eu te amo! <3`;
 });
 
 frasesContainer.addEventListener("click", () => {
@@ -287,3 +288,78 @@ function escolherAmorAleatorio(tipo = "direto") {
   const indiceAleatorio = Math.floor(Math.random() * lista.length);
   return lista[indiceAleatorio];
 }
+
+const imgs = ["img1", "img2", "img3", "img4", "img5", "img6"];
+
+document.body.addEventListener("click", () => {
+  document.body.className = "";
+
+  const classeAleatoria = imgs[Math.floor(Math.random() * imgs.length)];
+
+  // Adiciona a nova classe
+  document.body.classList.add(classeAleatoria);
+});
+
+const footer = document.querySelector("footer");
+const footerh1 = document.querySelector("footer h1");
+
+const textos = [
+  "Clica aqui amor *-*",
+  "dnv",
+  "Vamos lá",
+  "Se consegueeeeee",
+  "vamos passar por alguns textos (-_-)",
+  "Olá! este é um clique.",
+  "Legal, você clicou de novo!",
+  "te amoooo",
+  "mais uns 15 só",
+  "é pra ver até o final em",
+  "vamosssss",
+  "uma surpresa te aguarda",
+  "Tã-Tã-Tããããã",
+  "oq sera q é",
+  "mais um pouqinho",
+  "pra faltar pouco kskskk",
+  "😁",
+  "Se ,ainda continua aqui? kskksks",
+  "espero que ss",
+  "mas, se deve tar se perguntando",
+  "Tudo",
+  "Isso",
+  "pra",
+  "que",
+  "?",
+  "X_x",
+  "eu te respondo",
+  "meu amor <3",
+  "Pra",
+  "Isso",
+  "Aqui",
+  "Made by: Amor da sua vida 😎 clica mias uma vez ta kskks",
+];
+
+let indice = 0;
+
+const video1 = document.querySelector("#video-fundo");
+const video2 = document.querySelector("#video-fo");
+
+footer.addEventListener("click", () => {
+  if (indice < textos.length) {
+    footerh1.innerText = textos[indice];
+    indice++;
+  } else {
+    const button = document.createElement("button");
+    button.innerText = "espero que goste ksksks";
+    button.addEventListener("click", () => {
+      footer.classList.add("hide");
+      frasesContainer.classList.add("hide");
+      textContainer.classList.add("hide");
+      video1.classList.remove("hide");
+      video2.classList.remove("hide");
+      document.body.classList.add("img3");
+    });
+
+    footer.innerHTML = "";
+    footer.appendChild(button);
+  }
+});
